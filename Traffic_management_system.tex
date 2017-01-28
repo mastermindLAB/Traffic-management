@@ -263,49 +263,40 @@
 \hyphenation{op-tical net-works semi-conduc-tor}
 
 \begin{document}
-\title{Emerging Threats and Defenses Regarding Denial of Service in the Network and Transport Layers}
+\title{\textbf{\textit{Traffic Management Systems for Congestion Control and Collision Avoidance
+in Smart City}}}
 
 % author names and affiliations
-\author{\IEEEauthorblockN{Darius Saif}
-\IEEEauthorblockA{Carleton University\\
-Darius.Saif@Carleton.ca}
-\and
-\IEEEauthorblockN{Alexandre Cormier}
-\IEEEauthorblockA{Carleton University\\
-Alexandre.Cormier@Carleton.ca}
+\author{\IEEEauthorblockN{Mohaminul Alam}
+\IEEEauthorblockA{University of Ottawa\\
+malam096@uottawa.ca}
 \and
 \IEEEauthorblockN{Suranjit Banik}
 \IEEEauthorblockA{University of Ottawa\\
-Sbani041@UOttawa.ca}}
+Sbani041@uOttawa.ca}}
 
 % make the title area
 \maketitle
 
 \begin{abstract}
 %Refresh this?
-Denial of Service (DoS), and their larger-scale variant Distributed Denial of Service (DDoS), attacks seek out and exploit various network vulnerabilities in order to overwhelm a node to the point of severe impairment. This may lead to outages for legitimate clients making requests to servers and can also gravely affect peer-to-peer infrastructures. These attacks prey on protocols residing in numerous layers of the Open Systems Interconnection (OSI) model and fall under different sub-categories. Well-known attacks in this field are SYN flooding, Teardrop, Local Area Network Denial (LAND), as well as both User Datagram Protocol (UDP) and Internet Control Message Protocol (ICMP) flooding. As the number of users and services accommodated by the Internet increases, many emerging technologies exist to further improve network performance. With innovative notions such as Software Defined Networking (SDN) and cloud computing, taking precautions against DoS-based attacks is of the utmost importance. This survey aims to address the latest strides in both attack methodologies and defense mechanisms specific to the network and transport layers of the OSI model.
+A vital test for supporting multimedia applications in the Internet of Things is the security heterogeneity of wired and remote sensor and actuator systems. In this work, we plan another and effective media-mindful security structure for encouraging different sight and sound applications in the Internet of Things. To start with, we exhibit a novel sight and sound activity arrangement and investigation strategy for taking care of the heterogeneity of different applications. At that point a media-mindful activity security engineering is proposed in light of the given movement grouping to empower different interactive media administrations being accessible anyplace and at whatever time.The Traffic management systems (TMS) view is a top-down administration point of view that incorporates innovation principally to enhance the stream of vehicle movement and enhance well-being. To the best of our understanding, this review is the first to give general Real-time activity information from cameras, speed sensors, and so on streams into a Transportation Management Center to avoid traffic congestion and collision.
 \end{abstract}
 
 \begin{IEEEkeywords}
-Survey,
-Denial of Service,
-Reflective Attack,
-LDoS,
-DDoS Defense,
-Network Layer,
-Transport Layer,
-Cloud Computing,
-Software Defined Networking,
-Botnets
+Smart Signal; Smart City;Wireless Sensor Network (WSN), RFID (Radio Frequency
+Identification), Congestion control
 \end{IEEEkeywords}
 % no keywords
 
 \IEEEpeerreviewmaketitle
 
 \section{Introduction}
-Denial of Service (DoS) is a class of networking attacks which, as the name suggests, seek to bring a particular node, resource, or application down for a period of time --- denying potential users of accessing such a service. Throughout the years, industry leading names (including Yahoo, Amazon, CNN \cite{Bhuyan:partialRank} and, most recently, Dyn\footnote{http://dyn.com/blog/dyn-analysis-summary-of-friday-october-21-attack/}) have been subject to DoS. A number of factors may motivate malicious users to orchestrate these attacks; Arbor Network's annual World Infrastructure Security Report (WISR) attributes demonstration of attack ability, online gaming, extortion, activism, rivalry, an even financial market manipulation as key motivators \cite{Arbor:WISR}.
+In this day and age, everybody covet for a quick paced life even without pestering for the human life. These days because of less demanding EMI choices individuals can bear the cost of extravagance autos, bicycles hence adding to the movement step by step. Indeed, even producers have embraced different promoting systems like how much mileage a vehicle provides for increment the deals. This adds to the activity pledges as well as expands the danger of passing because of accidents and vehicle crash.
+The fundamental thought of IoT is unavoidably furnishing us with an assortment of things or items, for example, radio frequency identification (RFID) labels, sensors, actuators, and cell phones, which can connect and coordinate with each other to do the errands of correspondence, calculation, and administration [1]. Such a system puts a splendid closer view for expanded information, mixed media applications as interest for rising applications like video on request (VoD), IPTV, and voice over IP (VoIP) has developed massively [2]. Figure 1 gives a complete case of sight and sound administration, engineering with regards to IoT. These days, security is of conclusive significance for different sight and sound applications in IoT [3]. Since the IoT is working to extensively execute unconfirmed client actualized applications for various clients, both applications and clients can be wellsprings of security dangers to the IoT [4, 5]. For model, the vulnerabilities of uses and sensors can be misused by programmers, and vindictive clients can get to the IoT to dispatch awful administration assaults. Also, a true blue client may mess with shared sight and sound information or inordinate fumes arrange assets to intrude on administrations accessible to other true blue clients.
+ \cite{Multimedia:chao} and, most recently, Dyn\footnote{http://dyn.com/blog/dyn-analysis-summary-of-friday-october-21-attack/})  \cite{Arbor:WISR}.
 
-There are two major factors which play into the effectiveness of DoS attacks: their severity (in terms of attack volume) as well as the relative ease of launching such an attack. One of the most important examples that speaks to attack severity is how DoS has become increasingly distributed (Distributed Denial of Service --- DDoS) over the years \cite{DDoS:CERT}. DDoS essentially involves multiple clients, sometimes thousands of them controlled by the same attacker, all performing a DoS attack on the same target at the same time, considerably increasing the devastation of the attack \cite{Botnet:Hoque}. DDoS attackers may also opt for a specific hitlist of targets.
+ \cite{DDoS:CERT}.  \cite{Botnet:Hoque}. DDoS attackers may also opt for a specific hitlist of targets.
 
 The sheer traffic volume of a DDoS attack has not yet reached a clear plateau either. Hoque \textit{et al.}'s survey on DDoS attacks cites 2014's largest DDoS attack weighing in at 400 Gbps \cite{Botnet:Hoque}, whereas the latest volume of WISR has recorded up to 500 Gbps \cite{Arbor:WISR}. October 2016 saw a record shattering DDoS attack exploiting Internet of Things (IoT) devices in an attack on Dyn, reportedly clocking in at 1.2 Tbps\textsuperscript{1}.
 
@@ -316,12 +307,12 @@ Even more concerning, the rise of botnets have paved the way for so-called DDoS-
 \subsection{Motivation and Scope}
 Recent statistics published by the International Telecommunications Union (ITU) report that in 2016, nearly 3.5 billion people are using the Internet worldwide; more than doubling since 2008 \cite{ICTStats}. Our heavy dependency on paradigms such as social media, file storage, streaming, and online banking often makes such services the target for attackers. Victims face damages from a variety of fronts, including: tarnished brand image, loss of customers (and ultimately revenue) during the outage, business operational costs, as well as expenses related to IT and forensic investigation \cite{Arbor:WISR}. Accordingly, clients and service providers alike share stake in a service's uninterrupted operation. As such, the modern network engineer is tasked with understanding sophisticated attack methodologies and being capable of setting sufficient countermeasures in place to promote network integrity.
 
-%Double column figure on the survey's attack/defense structure
+%Double column figure on the survey's attack/defense structurehttps://preview.overleaf.com/public/fzxgdkckzbfp/images/031e2ed4cf954fd7315d27de689b41a49bef870b.jpeg
 \begin{figure*}[!t]
 \centering
-\includegraphics[width=7in]{myDiagramBig}
+\includegraphics[width=7in]{flowDiagramTrafficManagement}
 \caption{The Survey's Classification of Attacks and Defenses.}
-\label{fig_struct}
+\label{flowDiagramTrafficManagement.png}
 \end{figure*}
 
 DoS is by no means a new problem. Dating back decades, it has been used to impair networks and extensive research has been performed on the subject, as evidenced by existing surveys on the matter \cite{SecuringCloudServers:Chapade,DoSTCPAnalysis:Schuba,Yan:SDNSurvey}. Furthermore, a number of Request for Comments (RFCs) have been published by the Internet Engineering Task Force (IETF) in order to shed light on such issues \cite{rfc1948,rfc6528}. That being said, the area remains quite active.
@@ -390,9 +381,9 @@ Combination of the three.
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=3.5in]{locationOfDeployment}
-\caption{Defense Deployment Location}
-\label{fig_def}
+\includegraphics[width=3.5in]{traffic}
+\caption{Traffic Management using multimedia service}
+\label{traffic.png}
 \end{figure}
 
 \noindent Other useful defense metrics are provided in Table \ref{tab:defMet}. 
@@ -458,7 +449,7 @@ The Low-rate DoS (LDoS), also known as the Shrew, attack preys on TCP's congesti
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=3.5in]{LDoSAttProf}
+\includegraphics[width=3.5in]{traffic}
 \caption{LDoS Attack Profile with Duty Cycle \textit{D}}
 \label{fig_ldosAttProf}
 \end{figure}
